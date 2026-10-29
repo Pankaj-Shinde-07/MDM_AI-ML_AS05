@@ -1,0 +1,149 @@
+PRACTICAL 5: ENSEMBLE LEARNING - SAMPLE EXECUTION OUTPUT LOG
+=====================================================================================
+Execution Environment: Python 3.10+, Scikit-Learn 1.0+
+Student: Pankaj Shinde (PRN: 202401100005, Roll No: 07)
+
+EXPERIMENTAL BENCHMARK TABLE:
+                  Model        Category  Accuracy  Precision   Recall  F1-Score  ROC-AUC  Log Loss  Zero-One Loss  Training Time (ms)  Inference Latency (ms)
+    Logistic Regression Base Classifier  0.982456   0.986111 0.986111  0.986111 0.995370  0.077746       0.017544             16.9195                  0.6867
+          Decision Tree Base Classifier  0.938596   0.957746 0.944444  0.951049 0.934193  1.655946       0.061404              9.0678                  0.4622
+ Support Vector Machine Base Classifier  0.982456   0.986111 0.986111  0.986111 0.995040  0.086009       0.017544             27.5636                  2.6466
+    K-Nearest Neighbors Base Classifier  0.956140   0.958904 0.972222  0.965517 0.978836  0.407301       0.043860              1.0560               3340.3891
+   Gaussian Naïve Bayes Base Classifier  0.929825   0.944444 0.944444  0.944444 0.986772  0.436964       0.070175              2.9800                  0.6838
+      Stacking Ensemble        Ensemble  0.973684   0.972603 0.986111  0.979310 0.992725  0.085878       0.026316           9944.8430                 23.5917
+      AdaBoost Ensemble        Ensemble  0.956140   0.946667 0.986111  0.965986 0.982474  0.398195       0.043860            273.1303                 13.5712
+ Voting (Hard) Ensemble        Ensemble  0.973684   0.972603 0.986111  0.979310      NaN       NaN       0.026316             58.4025                 20.8902
+ Voting (Soft) Ensemble        Ensemble  0.964912   0.959459 0.986111  0.972603 0.990741  0.098190       0.035088             63.6502                 18.1324
+Random Forest (Bagging)        Ensemble  0.956140   0.958904 0.972222  0.965517 0.993386  0.109508       0.043860            376.8504                 59.4779
+
+=====================================================================================
+DETAILED CLASSIFICATION REPORTS:
+
+--- Model: Logistic Regression ---
+Accuracy:  0.9825
+Precision: 0.9861
+Recall:    0.9861
+F1-Score:  0.9861
+ROC-AUC:   0.9954
+Log Loss:  0.0777
+Zero-One:  0.0175
+Train Time: 16.92 ms | Infer Latency: 0.69 ms
+Confusion Matrix:
+[[41  1]
+ [ 1 71]]
+
+--- Model: Decision Tree ---
+Accuracy:  0.9386
+Precision: 0.9577
+Recall:    0.9444
+F1-Score:  0.9510
+ROC-AUC:   0.9342
+Log Loss:  1.6559
+Zero-One:  0.0614
+Train Time: 9.07 ms | Infer Latency: 0.46 ms
+Confusion Matrix:
+[[39  3]
+ [ 4 68]]
+
+--- Model: Support Vector Machine ---
+Accuracy:  0.9825
+Precision: 0.9861
+Recall:    0.9861
+F1-Score:  0.9861
+ROC-AUC:   0.9950
+Log Loss:  0.0860
+Zero-One:  0.0175
+Train Time: 27.56 ms | Infer Latency: 2.65 ms
+Confusion Matrix:
+[[41  1]
+ [ 1 71]]
+
+--- Model: K-Nearest Neighbors ---
+Accuracy:  0.9561
+Precision: 0.9589
+Recall:    0.9722
+F1-Score:  0.9655
+ROC-AUC:   0.9788
+Log Loss:  0.4073
+Zero-One:  0.0439
+Train Time: 1.06 ms | Infer Latency: 3340.39 ms
+Confusion Matrix:
+[[39  3]
+ [ 2 70]]
+
+--- Model: Gaussian Naïve Bayes ---
+Accuracy:  0.9298
+Precision: 0.9444
+Recall:    0.9444
+F1-Score:  0.9444
+ROC-AUC:   0.9868
+Log Loss:  0.4370
+Zero-One:  0.0702
+Train Time: 2.98 ms | Infer Latency: 0.68 ms
+Confusion Matrix:
+[[38  4]
+ [ 4 68]]
+
+--- Model: Stacking Ensemble ---
+Accuracy:  0.9737
+Precision: 0.9726
+Recall:    0.9861
+F1-Score:  0.9793
+ROC-AUC:   0.9927
+Log Loss:  0.0859
+Zero-One:  0.0263
+Train Time: 9944.84 ms | Infer Latency: 23.59 ms
+Confusion Matrix:
+[[40  2]
+ [ 1 71]]
+
+--- Model: AdaBoost Ensemble ---
+Accuracy:  0.9561
+Precision: 0.9467
+Recall:    0.9861
+F1-Score:  0.9660
+ROC-AUC:   0.9825
+Log Loss:  0.3982
+Zero-One:  0.0439
+Train Time: 273.13 ms | Infer Latency: 13.57 ms
+Confusion Matrix:
+[[38  4]
+ [ 1 71]]
+
+--- Model: Voting (Hard) Ensemble ---
+Accuracy:  0.9737
+Precision: 0.9726
+Recall:    0.9861
+F1-Score:  0.9793
+Zero-One:  0.0263
+Train Time: 58.40 ms | Infer Latency: 20.89 ms
+Confusion Matrix:
+[[40  2]
+ [ 1 71]]
+
+--- Model: Voting (Soft) Ensemble ---
+Accuracy:  0.9649
+Precision: 0.9595
+Recall:    0.9861
+F1-Score:  0.9726
+ROC-AUC:   0.9907
+Log Loss:  0.0982
+Zero-One:  0.0351
+Train Time: 63.65 ms | Infer Latency: 18.13 ms
+Confusion Matrix:
+[[39  3]
+ [ 1 71]]
+
+--- Model: Random Forest (Bagging) ---
+Accuracy:  0.9561
+Precision: 0.9589
+Recall:    0.9722
+F1-Score:  0.9655
+ROC-AUC:   0.9934
+Log Loss:  0.1095
+Zero-One:  0.0439
+Train Time: 376.85 ms | Infer Latency: 59.48 ms
+Confusion Matrix:
+[[39  3]
+ [ 2 70]]
+
